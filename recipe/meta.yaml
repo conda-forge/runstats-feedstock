@@ -34,7 +34,7 @@ test:
     - tests/*
   commands:
     - pip check
-    - pytest tests -vs
+    - pytest tests -vs -n auto --cov-branch --cov-fail-under=100 --cov-report=term-missing --cov=runstats
   requires:
     - pip
     - pytest
