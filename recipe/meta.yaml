@@ -31,10 +31,10 @@ test:
   imports:
     - runstats
   source_files:
-    - tests/test_runstats.py
+    - tests/*
   commands:
     - pip check
-    - pytest tests/test_runstats.py -vs
+    - pytest tests -vs
   requires:
     - pip
     - pytest
