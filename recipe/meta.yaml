@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 4
 
 requirements:
   build:
@@ -34,10 +34,12 @@ test:
     - tests/test_runstats.py
   commands:
     - pip check
-    - pytest tests/test_runstats.py -vs -k "not test_multiply"
+    - pytest tests/test_runstats.py -vs
   requires:
     - pip
     - pytest
+    - pytest-cov
+    - pytest-xdist
 
 about:
   home: http://www.grantjenks.com/docs/runstats/
