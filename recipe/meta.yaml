@@ -25,6 +25,7 @@ requirements:
     - tox
     - cython
     - pip
+    - setuptools
   run:
     - python
 
